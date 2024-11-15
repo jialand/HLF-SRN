@@ -1,0 +1,421 @@
+Preparing Data ====================================>
+Fixed dataset length: 3000
+Fixed dataset length: 3000
+Loading Teacher ====================================>
+loading RCANx4
+Preparing Student ===================================>
+Preparing loss function:
+0.500 * DS
+0.500 * TS
+10.000 * SA
+Model settings
+Teachers: [RCAN]
+Student: RCAN
+
+Data Settings
+RGB range: 255
+Scale: 4
+Input Image Size: (32, 32, 3)
+Output Image Size: (128, 128, 3)
+
+Training Settings
+Epochs: 200
+Learning rate: 0.000100
+Learning rate decay: 150-300-450-600
+
+Distillation Settings
+Distillation type: 
+	teacher supervision
+	feature distillation
+		type: SA
+		position: [1,2,3]
+
+
+
+Start Training ======================================>
+epoch 1
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:143: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 1]	Learning rate: 1.00e-04
+[0/3000]	[DS: 46.4849][TS: 48.2396][SA: 11.4737][Total: 106.1982]	0.6+0.1s, student psn:7.42, teacher psn:21.51
+[400/3000]	[DS: 8.4790][TS: 9.9835][SA: 6.3479][Total: 24.8105]	30.4+5.0s, student psn:23.02, teacher psn:19.06
+[800/3000]	[DS: 6.8177][TS: 7.9646][SA: 5.4682][Total: 20.2505]	30.2+4.0s, student psn:27.25, teacher psn:25.22
+[1200/3000]	[DS: 6.1386][TS: 7.0845][SA: 5.0229][Total: 18.2460]	30.8+5.3s, student psn:26.18, teacher psn:23.00
+[1600/3000]	[DS: 5.7188][TS: 6.5277][SA: 4.7399][Total: 16.9864]	30.4+5.1s, student psn:25.19, teacher psn:21.91
+[2000/3000]	[DS: 5.4492][TS: 6.1803][SA: 4.5598][Total: 16.1893]	30.1+4.9s, student psn:26.64, teacher psn:23.31
+[2400/3000]	[DS: 5.2593][TS: 5.9285][SA: 4.4180][Total: 15.6059]	29.6+5.0s, student psn:24.67, teacher psn:21.39
+[2800/3000]	[DS: 5.1026][TS: 5.7252][SA: 4.3087][Total: 15.1365]	30.5+5.2s, student psn:24.68, teacher psn:20.78
+
+Evaluation:
+[0/900][x4]	PSNR: 27.746 ave: 27.746
+[400/900][x4]	PSNR: 25.610 ave: 25.159
+[800/900][x4]	PSNR: 23.921 ave: 25.099
+Forward: 22.48s
+
+Saving...
+new best:  25.100507284158972
+Total: 23.32s
+
+epoch 2
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 2]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.8807][TS: 4.2523][SA: 3.4887][Total: 11.6217]	0.3+0.0s, student psn:25.81, teacher psn:22.18
+[400/3000]	[DS: 4.1565][TS: 4.4675][SA: 3.5478][Total: 12.1717]	29.1+1.6s, student psn:26.43, teacher psn:22.48
+[800/3000]	[DS: 4.1442][TS: 4.4475][SA: 3.5151][Total: 12.1068]	30.1+1.7s, student psn:26.57, teacher psn:23.19
+[1200/3000]	[DS: 4.1544][TS: 4.4385][SA: 3.4833][Total: 12.0763]	28.9+1.6s, student psn:22.82, teacher psn:19.11
+[1600/3000]	[DS: 4.1185][TS: 4.3745][SA: 3.4519][Total: 11.9449]	29.6+1.6s, student psn:24.45, teacher psn:20.68
+[2000/3000]	[DS: 4.1283][TS: 4.3782][SA: 3.4357][Total: 11.9422]	29.2+1.6s, student psn:25.92, teacher psn:22.29
+[2400/3000]	[DS: 4.1418][TS: 4.3756][SA: 3.4159][Total: 11.9334]	29.0+1.6s, student psn:24.56, teacher psn:21.22
+[2800/3000]	[DS: 4.1268][TS: 4.3580][SA: 3.3956][Total: 11.8804]	29.1+1.6s, student psn:24.17, teacher psn:20.51
+
+Evaluation:
+[0/900][x4]	PSNR: 26.640 ave: 26.640
+[400/900][x4]	PSNR: 25.820 ave: 25.119
+[800/900][x4]	PSNR: 24.798 ave: 25.227
+Forward: 14.88s
+
+Saving...
+new best:  25.22687316678278
+Total: 15.48s
+
+epoch 3
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 3]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.5990][TS: 4.0636][SA: 3.2473][Total: 10.9099]	0.3+0.0s, student psn:25.44, teacher psn:21.60
+[400/3000]	[DS: 3.9894][TS: 4.2334][SA: 3.2549][Total: 11.4777]	29.6+1.6s, student psn:23.60, teacher psn:19.56
+[800/3000]	[DS: 4.0076][TS: 4.2345][SA: 3.2404][Total: 11.4825]	29.3+1.6s, student psn:24.38, teacher psn:21.18
+[1200/3000]	[DS: 4.0243][TS: 4.2119][SA: 3.2144][Total: 11.4506]	29.1+1.6s, student psn:25.91, teacher psn:22.22
+[1600/3000]	[DS: 3.9893][TS: 4.1491][SA: 3.1844][Total: 11.3228]	29.3+1.6s, student psn:27.26, teacher psn:23.64
+[2000/3000]	[DS: 3.9904][TS: 4.1364][SA: 3.1724][Total: 11.2992]	29.0+1.6s, student psn:26.70, teacher psn:22.87
+[2400/3000]	[DS: 3.9977][TS: 4.1312][SA: 3.1570][Total: 11.2859]	29.0+1.6s, student psn:25.30, teacher psn:21.50
+[2800/3000]	[DS: 3.9883][TS: 4.1076][SA: 3.1381][Total: 11.2340]	29.6+1.7s, student psn:26.95, teacher psn:22.88
+
+Evaluation:
+[0/900][x4]	PSNR: 27.426 ave: 27.426
+[400/900][x4]	PSNR: 25.863 ave: 25.561
+[800/900][x4]	PSNR: 26.602 ave: 25.451
+Forward: 14.38s
+
+Saving...
+new best:  25.44856163474623
+Total: 15.07s
+
+epoch 4
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 4]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.4214][TS: 3.8162][SA: 2.8682][Total: 10.1058]	0.3+0.0s, student psn:25.73, teacher psn:21.88
+[400/3000]	[DS: 4.0122][TS: 4.1326][SA: 3.0373][Total: 11.1821]	29.3+1.7s, student psn:26.22, teacher psn:22.15
+[800/3000]	[DS: 4.0145][TS: 4.0929][SA: 3.0243][Total: 11.1317]	28.8+1.6s, student psn:25.07, teacher psn:21.61
+[1200/3000]	[DS: 4.0249][TS: 4.0895][SA: 3.0094][Total: 11.1238]	28.7+1.6s, student psn:25.57, teacher psn:21.63
+[1600/3000]	[DS: 3.9899][TS: 4.0294][SA: 2.9854][Total: 11.0048]	29.1+1.6s, student psn:25.25, teacher psn:21.59
+[2000/3000]	[DS: 3.9851][TS: 4.0227][SA: 2.9833][Total: 10.9911]	28.6+1.6s, student psn:28.50, teacher psn:24.55
+[2400/3000]	[DS: 3.9923][TS: 4.0295][SA: 2.9763][Total: 10.9981]	29.8+1.7s, student psn:24.56, teacher psn:20.89
+[2800/3000]	[DS: 3.9964][TS: 4.0362][SA: 2.9690][Total: 11.0016]	29.4+1.6s, student psn:25.71, teacher psn:21.41
+
+Evaluation:
+[0/900][x4]	PSNR: 26.598 ave: 26.598
+[400/900][x4]	PSNR: 26.876 ave: 25.461
+[800/900][x4]	PSNR: 25.963 ave: 25.441
+Forward: 14.15s
+
+Saving...
+Total: 14.70s
+
+epoch 5
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 5]	Learning rate: 1.00e-04
+[0/3000]	[DS: 4.0187][TS: 4.3773][SA: 2.9487][Total: 11.3447]	0.3+0.0s, student psn:25.02, teacher psn:20.69
+[400/3000]	[DS: 4.0050][TS: 3.9944][SA: 2.8732][Total: 10.8726]	29.2+1.6s, student psn:25.79, teacher psn:21.85
+[800/3000]	[DS: 3.9540][TS: 3.9539][SA: 2.8689][Total: 10.7769]	29.1+1.6s, student psn:25.55, teacher psn:21.59
+[1200/3000]	[DS: 3.9602][TS: 3.9396][SA: 2.8562][Total: 10.7560]	29.3+1.6s, student psn:24.87, teacher psn:20.49
+[1600/3000]	[DS: 3.9376][TS: 3.8913][SA: 2.8390][Total: 10.6679]	29.3+1.6s, student psn:26.07, teacher psn:22.11
+[2000/3000]	[DS: 3.9500][TS: 3.9059][SA: 2.8389][Total: 10.6948]	29.1+1.6s, student psn:26.36, teacher psn:22.55
+[2400/3000]	[DS: 3.9639][TS: 3.9184][SA: 2.8348][Total: 10.7171]	29.3+1.6s, student psn:24.57, teacher psn:20.46
+[2800/3000]	[DS: 3.9651][TS: 3.9149][SA: 2.8279][Total: 10.7080]	29.8+1.6s, student psn:25.43, teacher psn:21.90
+
+Evaluation:
+[0/900][x4]	PSNR: 27.067 ave: 27.067
+[400/900][x4]	PSNR: 26.988 ave: 25.398
+[800/900][x4]	PSNR: 26.353 ave: 25.497
+Forward: 14.08s
+
+Saving...
+new best:  25.48183357765576
+Total: 14.70s
+
+epoch 6
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 6]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.6481][TS: 3.6785][SA: 2.6370][Total: 9.9636]	0.3+0.0s, student psn:25.25, teacher psn:21.12
+[400/3000]	[DS: 4.0360][TS: 3.9835][SA: 2.7714][Total: 10.7909]	29.4+1.6s, student psn:24.18, teacher psn:19.69
+[800/3000]	[DS: 3.9685][TS: 3.9335][SA: 2.7733][Total: 10.6753]	28.6+1.6s, student psn:25.43, teacher psn:21.40
+[1200/3000]	[DS: 3.9881][TS: 3.9127][SA: 2.7581][Total: 10.6588]	29.0+1.6s, student psn:25.61, teacher psn:21.86
+[1600/3000]	[DS: 3.9662][TS: 3.8528][SA: 2.7394][Total: 10.5583]	28.8+1.6s, student psn:25.43, teacher psn:21.28
+[2000/3000]	[DS: 3.9769][TS: 3.8521][SA: 2.7344][Total: 10.5634]	28.6+1.6s, student psn:27.25, teacher psn:23.82
+[2400/3000]	[DS: 3.9770][TS: 3.8426][SA: 2.7291][Total: 10.5488]	28.8+1.6s, student psn:24.88, teacher psn:21.02
+[2800/3000]	[DS: 3.9766][TS: 3.8341][SA: 2.7195][Total: 10.5302]	29.9+1.7s, student psn:26.24, teacher psn:22.87
+
+Evaluation:
+[0/900][x4]	PSNR: 26.433 ave: 26.433
+[400/900][x4]	PSNR: 26.329 ave: 25.245
+[800/900][x4]	PSNR: 24.461 ave: 25.239
+Forward: 14.55s
+
+Saving...
+Total: 15.09s
+
+epoch 7
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 7]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.2675][TS: 3.1375][SA: 2.5674][Total: 8.9723]	0.3+0.0s, student psn:25.83, teacher psn:21.86
+[400/3000]	[DS: 3.9189][TS: 3.7764][SA: 2.6853][Total: 10.3806]	29.4+1.6s, student psn:24.77, teacher psn:20.33
+[800/3000]	[DS: 3.9468][TS: 3.7940][SA: 2.6820][Total: 10.4229]	29.5+1.6s, student psn:27.19, teacher psn:23.59
+[1200/3000]	[DS: 3.9446][TS: 3.7469][SA: 2.6617][Total: 10.3531]	28.8+1.6s, student psn:25.69, teacher psn:21.90
+[1600/3000]	[DS: 3.9207][TS: 3.6817][SA: 2.6399][Total: 10.2423]	28.9+1.6s, student psn:26.66, teacher psn:22.88
+[2000/3000]	[DS: 3.9290][TS: 3.6823][SA: 2.6363][Total: 10.2475]	28.8+1.6s, student psn:25.75, teacher psn:22.53
+[2400/3000]	[DS: 3.9350][TS: 3.6850][SA: 2.6324][Total: 10.2524]	29.0+1.6s, student psn:25.47, teacher psn:21.16
+[2800/3000]	[DS: 3.9328][TS: 3.6816][SA: 2.6279][Total: 10.2423]	29.4+1.6s, student psn:27.11, teacher psn:23.26
+
+Evaluation:
+[0/900][x4]	PSNR: 26.754 ave: 26.754
+[400/900][x4]	PSNR: 27.032 ave: 25.236
+[800/900][x4]	PSNR: 24.504 ave: 25.233
+Forward: 14.44s
+
+Saving...
+Total: 15.01s
+
+epoch 8
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 8]	Learning rate: 1.00e-04
+[0/3000]	[DS: 4.6605][TS: 4.7101][SA: 2.6775][Total: 12.0481]	0.3+0.0s, student psn:23.25, teacher psn:19.50
+[400/3000]	[DS: 3.9701][TS: 3.6486][SA: 2.5667][Total: 10.1854]	29.1+1.6s, student psn:25.91, teacher psn:22.07
+[800/3000]	[DS: 3.9558][TS: 3.6454][SA: 2.5699][Total: 10.1711]	28.8+1.6s, student psn:26.53, teacher psn:23.60
+[1200/3000]	[DS: 3.9840][TS: 3.6806][SA: 2.5694][Total: 10.2340]	29.3+1.6s, student psn:25.70, teacher psn:22.28
+[1600/3000]	[DS: 3.9716][TS: 3.6354][SA: 2.5557][Total: 10.1626]	29.3+1.6s, student psn:26.06, teacher psn:22.10
+[2000/3000]	[DS: 3.9869][TS: 3.6505][SA: 2.5554][Total: 10.1928]	29.1+1.6s, student psn:25.65, teacher psn:21.99
+[2400/3000]	[DS: 3.9831][TS: 3.6534][SA: 2.5574][Total: 10.1939]	29.2+1.6s, student psn:25.18, teacher psn:21.51
+[2800/3000]	[DS: 3.9804][TS: 3.6464][SA: 2.5527][Total: 10.1795]	32.2+1.8s, student psn:24.90, teacher psn:21.75
+
+Evaluation:
+[0/900][x4]	PSNR: 26.146 ave: 26.146
+[400/900][x4]	PSNR: 26.092 ave: 25.461
+[800/900][x4]	PSNR: 25.322 ave: 25.308
+Forward: 14.82s
+
+Saving...
+Total: 15.47s
+
+epoch 9
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 9]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.2171][TS: 3.3346][SA: 2.5210][Total: 9.0727]	0.3+0.0s, student psn:26.27, teacher psn:22.33
+[400/3000]	[DS: 3.9554][TS: 3.6228][SA: 2.5212][Total: 10.0994]	29.5+1.6s, student psn:25.20, teacher psn:21.10
+[800/3000]	[DS: 3.9496][TS: 3.5981][SA: 2.5052][Total: 10.0528]	28.8+1.6s, student psn:24.98, teacher psn:21.86
+[1200/3000]	[DS: 3.9834][TS: 3.6183][SA: 2.4993][Total: 10.1010]	28.8+1.6s, student psn:23.25, teacher psn:19.61
+[1600/3000]	[DS: 3.9381][TS: 3.5416][SA: 2.4800][Total: 9.9597]	28.8+1.6s, student psn:24.44, teacher psn:21.17
+[2000/3000]	[DS: 3.9657][TS: 3.5673][SA: 2.4805][Total: 10.0136]	29.0+1.6s, student psn:25.95, teacher psn:22.47
+[2400/3000]	[DS: 3.9628][TS: 3.5593][SA: 2.4777][Total: 9.9998]	29.5+1.6s, student psn:24.67, teacher psn:20.94
+[2800/3000]	[DS: 3.9767][TS: 3.5755][SA: 2.4768][Total: 10.0290]	29.4+1.6s, student psn:26.37, teacher psn:22.14
+
+Evaluation:
+[0/900][x4]	PSNR: 26.407 ave: 26.407
+[400/900][x4]	PSNR: 25.650 ave: 25.169
+[800/900][x4]	PSNR: 25.601 ave: 25.205
+Forward: 14.83s
+
+Saving...
+Total: 15.39s
+
+epoch 10
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 10]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.2573][TS: 3.5299][SA: 2.4362][Total: 9.2234]	0.3+0.0s, student psn:26.32, teacher psn:21.84
+[400/3000]	[DS: 4.0034][TS: 3.5833][SA: 2.4507][Total: 10.0374]	29.4+1.6s, student psn:24.84, teacher psn:21.01
+[800/3000]	[DS: 3.9856][TS: 3.5571][SA: 2.4539][Total: 9.9966]	29.0+1.6s, student psn:23.89, teacher psn:20.77
+[1200/3000]	[DS: 3.9929][TS: 3.5541][SA: 2.4393][Total: 9.9863]	29.2+1.6s, student psn:25.10, teacher psn:21.18
+[1600/3000]	[DS: 3.9853][TS: 3.5102][SA: 2.4281][Total: 9.9236]	28.5+1.6s, student psn:25.13, teacher psn:21.51
+[2000/3000]	[DS: 3.9753][TS: 3.4980][SA: 2.4236][Total: 9.8969]	28.8+1.6s, student psn:25.88, teacher psn:22.26
+[2400/3000]	[DS: 3.9872][TS: 3.5134][SA: 2.4263][Total: 9.9269]	29.6+1.6s, student psn:24.64, teacher psn:21.19
+[2800/3000]	[DS: 3.9830][TS: 3.5119][SA: 2.4225][Total: 9.9174]	28.9+1.6s, student psn:24.83, teacher psn:20.90
+
+Evaluation:
+[0/900][x4]	PSNR: 28.023 ave: 28.023
+[400/900][x4]	PSNR: 25.817 ave: 25.057
+[800/900][x4]	PSNR: 26.222 ave: 25.045
+Forward: 14.37s
+
+Saving...
+Total: 14.86s
+
+epoch 11
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 11]	Learning rate: 1.00e-04
+[0/3000]	[DS: 4.3602][TS: 3.9140][SA: 2.3597][Total: 10.6339]	0.3+0.0s, student psn:23.71, teacher psn:20.17
+[400/3000]	[DS: 3.9947][TS: 3.4822][SA: 2.3872][Total: 9.8641]	29.1+1.6s, student psn:25.40, teacher psn:21.44
+[800/3000]	[DS: 3.9584][TS: 3.4679][SA: 2.3894][Total: 9.8157]	28.8+1.6s, student psn:23.18, teacher psn:19.94
+[1200/3000]	[DS: 3.9911][TS: 3.5047][SA: 2.3966][Total: 9.8924]	29.1+1.6s, student psn:24.74, teacher psn:21.24
+[1600/3000]	[DS: 3.9711][TS: 3.4759][SA: 2.3854][Total: 9.8324]	28.9+1.6s, student psn:26.98, teacher psn:22.88
+[2000/3000]	[DS: 3.9851][TS: 3.4687][SA: 2.3792][Total: 9.8330]	29.0+1.6s, student psn:25.73, teacher psn:21.91
+[2400/3000]	[DS: 3.9929][TS: 3.4803][SA: 2.3787][Total: 9.8518]	29.3+1.6s, student psn:24.91, teacher psn:21.51
+[2800/3000]	[DS: 3.9935][TS: 3.4702][SA: 2.3737][Total: 9.8374]	29.2+1.6s, student psn:24.78, teacher psn:21.66
+
+Evaluation:
+[0/900][x4]	PSNR: 28.184 ave: 28.184
+[400/900][x4]	PSNR: 26.197 ave: 25.203
+[800/900][x4]	PSNR: 24.650 ave: 25.043
+Forward: 15.22s
+
+Saving...
+Total: 15.74s
+
+epoch 12
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 12]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.3429][TS: 3.0063][SA: 2.2640][Total: 8.6132]	0.3+0.0s, student psn:26.62, teacher psn:22.93
+[400/3000]	[DS: 4.0104][TS: 3.5104][SA: 2.3611][Total: 9.8819]	28.6+1.6s, student psn:24.85, teacher psn:20.77
+[800/3000]	[DS: 3.9949][TS: 3.5285][SA: 2.3690][Total: 9.8924]	46.7+2.2s, student psn:26.29, teacher psn:23.38
+[1200/3000]	[DS: 3.9729][TS: 3.4682][SA: 2.3516][Total: 9.7927]	84.4+3.7s, student psn:25.27, teacher psn:21.96
+[1600/3000]	[DS: 3.9572][TS: 3.4293][SA: 2.3363][Total: 9.7228]	92.9+4.2s, student psn:24.32, teacher psn:20.45
+[2000/3000]	[DS: 3.9727][TS: 3.4420][SA: 2.3403][Total: 9.7549]	86.8+4.2s, student psn:26.08, teacher psn:22.41
+[2400/3000]	[DS: 3.9760][TS: 3.4372][SA: 2.3355][Total: 9.7487]	86.8+4.4s, student psn:24.78, teacher psn:21.31
+[2800/3000]	[DS: 3.9684][TS: 3.4259][SA: 2.3297][Total: 9.7241]	82.6+4.1s, student psn:26.95, teacher psn:24.24
+
+Evaluation:
+[0/900][x4]	PSNR: 26.014 ave: 26.014
+[400/900][x4]	PSNR: 27.277 ave: 25.144
+[800/900][x4]	PSNR: 24.067 ave: 25.068
+Forward: 31.34s
+
+Saving...
+Total: 32.72s
+
+epoch 13
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 13]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.6527][TS: 3.5831][SA: 2.3539][Total: 9.5897]	0.8+0.0s, student psn:24.82, teacher psn:21.29
+[400/3000]	[DS: 4.0114][TS: 3.4458][SA: 2.2959][Total: 9.7531]	60.6+3.4s, student psn:24.42, teacher psn:20.44
+[800/3000]	[DS: 3.9808][TS: 3.4378][SA: 2.3101][Total: 9.7286]	58.2+3.3s, student psn:22.75, teacher psn:19.09
+[1200/3000]	[DS: 3.9869][TS: 3.4349][SA: 2.3030][Total: 9.7248]	59.0+3.3s, student psn:25.67, teacher psn:21.92
+[1600/3000]	[DS: 3.9677][TS: 3.3944][SA: 2.2903][Total: 9.6524]	58.5+3.2s, student psn:25.35, teacher psn:21.37
+[2000/3000]	[DS: 3.9607][TS: 3.3819][SA: 2.2892][Total: 9.6318]	58.1+3.3s, student psn:26.33, teacher psn:22.82
+[2400/3000]	[DS: 3.9724][TS: 3.3846][SA: 2.2896][Total: 9.6467]	57.7+3.3s, student psn:24.67, teacher psn:20.96
+[2800/3000]	[DS: 3.9651][TS: 3.3712][SA: 2.2829][Total: 9.6191]	57.4+3.2s, student psn:25.81, teacher psn:22.33
+
+Evaluation:
+[0/900][x4]	PSNR: 26.705 ave: 26.705
+[400/900][x4]	PSNR: 25.899 ave: 25.179
+[800/900][x4]	PSNR: 26.289 ave: 25.165
+Forward: 28.55s
+
+Saving...
+Total: 29.66s
+
+epoch 14
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 14]	Learning rate: 1.00e-04
+[0/3000]	[DS: 4.2474][TS: 3.8027][SA: 2.3631][Total: 10.4133]	0.5+0.0s, student psn:25.72, teacher psn:21.88
+[400/3000]	[DS: 4.0393][TS: 3.4568][SA: 2.2872][Total: 9.7833]	58.0+3.1s, student psn:25.36, teacher psn:21.55
+[800/3000]	[DS: 3.9880][TS: 3.4011][SA: 2.2784][Total: 9.6675]	59.5+3.2s, student psn:27.20, teacher psn:24.78
+[1200/3000]	[DS: 4.0013][TS: 3.3914][SA: 2.2695][Total: 9.6622]	57.8+3.2s, student psn:25.36, teacher psn:22.13
+[1600/3000]	[DS: 3.9836][TS: 3.3419][SA: 2.2553][Total: 9.5808]	60.1+3.2s, student psn:25.13, teacher psn:21.78
+[2000/3000]	[DS: 3.9866][TS: 3.3404][SA: 2.2524][Total: 9.5793]	60.7+3.2s, student psn:27.30, teacher psn:23.79
+[2400/3000]	[DS: 3.9918][TS: 3.3463][SA: 2.2559][Total: 9.5940]	59.1+3.2s, student psn:25.02, teacher psn:21.24
+[2800/3000]	[DS: 3.9958][TS: 3.3548][SA: 2.2552][Total: 9.6058]	58.3+3.3s, student psn:26.06, teacher psn:22.79
+
+Evaluation:
+[0/900][x4]	PSNR: 26.703 ave: 26.703
+[400/900][x4]	PSNR: 27.551 ave: 25.279
+[800/900][x4]	PSNR: 24.925 ave: 25.092
+Forward: 24.08s
+
+Saving...
+Total: 24.70s
+
+epoch 15
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 15]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.1922][TS: 2.5850][SA: 2.0188][Total: 7.7960]	0.4+0.0s, student psn:26.02, teacher psn:22.32
+[400/3000]	[DS: 3.9836][TS: 3.3761][SA: 2.2283][Total: 9.5880]	41.5+2.5s, student psn:24.25, teacher psn:20.45
+[800/3000]	[DS: 3.9415][TS: 3.3549][SA: 2.2277][Total: 9.5240]	41.3+2.1s, student psn:26.23, teacher psn:23.25
+[1200/3000]	[DS: 3.9903][TS: 3.3726][SA: 2.2285][Total: 9.5914]	41.9+2.0s, student psn:24.84, teacher psn:21.24
+[1600/3000]	[DS: 3.9740][TS: 3.3269][SA: 2.2162][Total: 9.5171]	41.0+2.0s, student psn:27.98, teacher psn:23.57
+[2000/3000]	[DS: 3.9831][TS: 3.3356][SA: 2.2150][Total: 9.5338]	40.6+2.0s, student psn:25.79, teacher psn:22.70
+[2400/3000]	[DS: 4.0018][TS: 3.3455][SA: 2.2182][Total: 9.5655]	40.4+2.0s, student psn:25.18, teacher psn:22.11
+[2800/3000]	[DS: 4.0069][TS: 3.3511][SA: 2.2192][Total: 9.5773]	40.4+2.0s, student psn:24.10, teacher psn:20.88
+
+Evaluation:
+[0/900][x4]	PSNR: 26.831 ave: 26.831
+[400/900][x4]	PSNR: 26.003 ave: 25.049
+[800/900][x4]	PSNR: 24.391 ave: 24.921
+Forward: 19.45s
+
+Saving...
+Total: 20.10s
+
+epoch 16
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 16]	Learning rate: 1.00e-04
+[0/3000]	[DS: 3.2350][TS: 2.7009][SA: 2.0978][Total: 8.0337]	0.4+0.0s, student psn:25.42, teacher psn:22.19
+Traceback (most recent call last):
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\train.py", line 472, in <module>
+    train(epoch)
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\train.py", line 175, in train
+    student_fms, student_sr = student(lr)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\models\rcan.py", line 113, in forward
+    res, residual = getattr(self, 'body_group{}'.format(str(group_id)))(res)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\models\rcan.py", line 62, in forward
+    res = self.body(x)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\models\rcan.py", line 44, in forward
+    res = self.body(x)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+^C

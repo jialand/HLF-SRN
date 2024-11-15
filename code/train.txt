@@ -1,0 +1,61 @@
+Preparing Data ====================================>
+Image count for train :48300
+Image count for valid :21000
+Loading Teacher ====================================>
+loading RCANx4
+Preparing Student ===================================>
+Preparing loss function:
+0.500 * DS
+0.500 * TS
+10.000 * SA
+Model settings
+Teachers: [RCAN]
+Student: RCAN
+
+Data Settings
+RGB range: 255
+Scale: 4
+Input Image Size: (48, 48, 3)
+Output Image Size: (192, 192, 3)
+
+Training Settings
+Epochs: 200
+Learning rate: 0.000100
+Learning rate decay: 150-300-450-600
+
+Distillation Settings
+Distillation type: 
+	teacher supervision
+	feature distillation
+		type: SA
+		position: [1,2,3]
+
+
+
+Start Training ======================================>
+epoch 1
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:143: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+X:\miniconda3\envs\FSR\lib\site-packages\torch\optim\lr_scheduler.py:454: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[Epoch 1]	Learning rate: 1.00e-04
+[0/48300]	[DS: 55.1604][TS: 55.1611][SA: 1.4538][Total: 111.7752]	2.4+0.1s
+Traceback (most recent call last):
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\train.py", line 421, in <module>
+    train(epoch)
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\train.py", line 166, in train
+    for batch, (lr, hr, _, __) in enumerate(train_loader):
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\utils\data\dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "X:\miniconda3\envs\FSR\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "X:\FSR\Knowledge-Distillation-for-Super-resolution-master\code\MyDataloader.py", line 64, in __getitem__
+    hr = Image.open(hr_path).convert("RGB")
+  File "X:\miniconda3\envs\FSR\lib\site-packages\PIL\Image.py", line 3247, in open
+    fp = builtins.open(filename, "rb")
+KeyboardInterrupt
+^C
